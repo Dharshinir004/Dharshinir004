@@ -19,11 +19,9 @@ jobs:
 
     steps:
       - name: generate snake.svg
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.Dharshinir004 }}
-          outputs: dist/snake.svg?palette=github-dark
-
+        uses: Platane/snk/svg-only@v3
+        with:github_user_name: Dharshinir004  # <--- FIX: Use your username as a string
+        outputs: dist/snake.svg?palette=github-dark
 
       - name: push snake.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
